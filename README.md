@@ -12,6 +12,8 @@ This package is designed to make it easier for Julia packages to build binary de
 
     julia> Pkg.build("CMakeWrapper")
 
+Note: For consistency, CMakeWrapper.jl will always download and use a binary release of CMake, regardless of what other versions you may have installed on your system. 
+
 # Usage
 
 You can declare a `CMakeProcess` similarly to the way you would use the `Autotools` provider in BinDeps.jl. In your `deps/build.jl` file, this would look like:
