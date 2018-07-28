@@ -18,12 +18,8 @@ import BinDeps: lower,
                 generate_steps
 export cmake_executable, CMakeBuild, CMakeProcess
 
-depsjl = joinpath(dirname(dirname(@__FILE__)), "deps", "deps.jl")
-if !isfile(depsjl)
-    error("CMakeWrapper not properly installed. Please run\nPkg.build(\"CMakeWrapper\")")
-else
-    include(depsjl)
-end
+import CMake
+const cmake_executable = CMake.cmake
 
 const dlext = Libdl.dlext
 
@@ -111,6 +107,5 @@ function generate_steps(dep::LibraryDependency, h::CMakeProcess, provider_opts)
     steps |= CMakeBuild(; opts...)
     steps
 end
-
 
 end # module
