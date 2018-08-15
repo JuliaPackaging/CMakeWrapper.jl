@@ -1,7 +1,7 @@
 # CMakeWrapper
 
 [![Build Status](https://travis-ci.org/JuliaPackaging/CMakeWrapper.jl.svg?branch=master)](https://travis-ci.org/JuliaPackaging/CMakeWrapper.jl)
-[![Build status](https://ci.appveyor.com/api/projects/status/iyaryc8ev5yeks0g?svg=true)](https://ci.appveyor.com/project/JuliaPackaging/cmakewrapper-jl)
+[![Build status](https://ci.appveyor.com/api/projects/status/x0k8dy47kau99bhr?svg=true)](https://ci.appveyor.com/project/StevenGJohnson/cmakewrapper-jl)
 [![codecov.io](http://codecov.io/github/JuliaPackaging/CMakeWrapper.jl/coverage.svg?branch=master)](http://codecov.io/github/JuliaPackaging/CMakeWrapper.jl?branch=master)
 
 This package provides a [BinDeps.jl](https://github.com/JuliaLang/BinDeps.jl)-compatible `CMakeProcess` class for automatically building CMake dependencies.
