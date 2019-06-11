@@ -30,6 +30,7 @@ const dlext = Libdl.dlext
     libtarget::Vector{AbstractString} = String[]
     installed_libpath::Vector{AbstractString} = String[]
     cmake_args::Vector{AbstractString} = String[]
+    configname::AbstractString = ""
     targetname::AbstractString = "install"
     env::Dict{Any, Any} = Dict{Any, Any}()
 end
@@ -41,6 +42,9 @@ function lower(s::CMakeBuild, collection)
         cmake_command = `$cmake_command $arg`
     end
     build_command = `$cmake_executable --build .`
+    if !isempty(s.configname)
+        build_command = `$build_command --config $(s.configname)`
+    end
     if !isempty(s.targetname)
         build_command = `$build_command --target $(s.targetname)`
     end
