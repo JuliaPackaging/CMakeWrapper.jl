@@ -1,5 +1,6 @@
 # CMakeWrapper
 
+![CI](https://github.com/aminya/CMakeWrapper.jl/workflows/CI/badge.svg)
 [![codecov.io](http://codecov.io/github/JuliaPackaging/CMakeWrapper.jl/coverage.svg?branch=master)](http://codecov.io/github/JuliaPackaging/CMakeWrapper.jl?branch=master)
 
 This package provides a [BinDeps.jl](https://github.com/JuliaLang/BinDeps.jl)-compatible `CMakeProcess` class for automatically building CMake dependencies.
