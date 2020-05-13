@@ -32,3 +32,6 @@ jobs:
         env:
           CMAKEWRAPPER_JL_BUILD_FROM_SOURCE: ${{ matrix.build_from_source }}
       - uses: julia-actions/julia-runtest@latest
+      - uses: julia-actions/julia-uploadcodecov@latest
+        env:
+          CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
